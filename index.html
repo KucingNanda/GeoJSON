@@ -1,94 +1,16 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peta Rute GIS - Titik Berangkat ke Tujuan | CrootJS</title>
-
-  <!-- Leaflet CSS -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""
-  />
-
-  <!-- Google Fonts & Custom CSS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Rute GeoJSON CrootJS</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header / Nav Info Bar -->
-  <header class="app-header">
-    <div class="header-content">
-      <div class="logo-area">
-        <span class="badge">CrootJS &amp; Leaflet</span>
-        <h1>Visualisasi Rute Spasial</h1>
-        <p class="subtitle">Rute dari Titik Berangkat (Kost) ke Titik Tujuan (Kampus ULBI)</p>
-      </div>
-      <div class="stats-card">
-        <div class="stat-item">
-          <span class="stat-label">Titik Awal</span>
-          <span class="stat-value" id="label-start">Kost</span>
-        </div>
-        <div class="stat-divider">➜</div>
-        <div class="stat-item">
-          <span class="stat-label">Titik Tujuan</span>
-          <span class="stat-value" id="label-dest">Kampus ULBI</span>
-        </div>
-      </div>
-    </div>
-  </header>
+  <div id="map"></div>
 
-  <!-- Main Map Container -->
-  <main class="map-wrapper">
-    <div id="map"></div>
-
-    <!-- Floating Info Panel -->
-    <div class="floating-panel">
-      <div class="panel-header">
-        <h3>Legenda &amp; Kontrol</h3>
-        <span class="status-indicator live" id="status-badge">Memuat Data...</span>
-      </div>
-      <div class="legend-list">
-        <div class="legend-item">
-          <span class="color-dot dot-start"></span>
-          <span><strong>Titik Berangkat:</strong> Kost</span>
-        </div>
-        <div class="legend-item">
-          <span class="color-dot dot-dest"></span>
-          <span><strong>Titik Tujuan:</strong> Kampus ULBI</span>
-        </div>
-        <div class="legend-item">
-          <span class="color-line line-route"></span>
-          <span><strong>Polyline Jalan (Rute)</strong></span>
-        </div>
-        <div class="legend-item">
-          <span class="color-box box-building"></span>
-          <span><strong>Gedung &amp; Fasilitas ULBI</strong></span>
-        </div>
-      </div>
-      <div class="panel-actions">
-        <button id="btn-fit-route" class="btn btn-primary" type="button">
-          🎯 Fokus ke Rute
-        </button>
-        <button id="btn-fit-ulbi" class="btn btn-secondary" type="button">
-          🏛️ Area ULBI
-        </button>
-      </div>
-    </div>
-  </main>
-
-  <!-- Leaflet JS -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
-
-  <!-- Main ES6 Module with CrootJS -->
-  <script type="module" src="./js/main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 </html>
