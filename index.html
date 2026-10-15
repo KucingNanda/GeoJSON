@@ -3,12 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peta Rute GeoJSON CrootJS</title>
+  <title>Peta Rute GeoJSON - CrootJS</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="map"></div>
+
+  <header class="navbar">
+    <div class="navbar-content">
+      <h1 class="navbar-title">Peta Rute Perjalanan</h1>
+      <p class="navbar-subtitle">Titik Berangkat (Kost) &rarr; Titik Tujuan (Kampus ULBI)</p>
+    </div>
+  </header>
+
+  <main class="page-container">
+    <div class="map-card">
+      <div id="map"></div>
+    </div>
+  </main>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script type="module" src="main.js"></script>

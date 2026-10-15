@@ -9,6 +9,11 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+// Pastikan Leaflet membaca ukuran container secara akurat
+setTimeout(() => {
+  map.invalidateSize();
+}, 200);
+
 // 3. Fungsi untuk menampilkan data GeoJSON ke peta
 function renderGeoJSON(geojsonData) {
   if (!geojsonData) return;
