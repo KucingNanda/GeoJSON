@@ -59,6 +59,6 @@ function onGeoJSONLoaded(result) {
 }
 
 // 5. Muat data Tugas3_NandaSR.geojson menggunakan CrootJS
-const geojsonUrl = "./Tugas3_NandaSR.geojson";
+const geojsonUrl = "./Tugas3_NandaSR_2.geojson";
 
 getJSON(geojsonUrl, onGeoJSONLoaded);
